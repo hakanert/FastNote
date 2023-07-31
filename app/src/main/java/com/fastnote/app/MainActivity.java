@@ -8,6 +8,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.fastnote.app.databinding.ActivityMainBinding;
+import com.fastnote.app.fragments.NoteAEFragment;
+import com.fastnote.app.utils.DatabaseHelper;
 import com.google.android.material.snackbar.Snackbar;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity{
         binding.fab.setImageDrawable(getDrawable(R.drawable.round_add));
 
         navController.addOnDestinationChangedListener((navController1, navDestination, bundle) -> {
-            if (navDestination.getId() == R.id.FirstFragment){
+            if (navDestination.getId() == R.id.NotesFragment){
                 binding.fab.setImageDrawable(getDrawable(R.drawable.round_add));
             }else {
                 binding.fab.setImageDrawable(getDrawable(R.drawable.round_save));
@@ -46,11 +48,11 @@ public class MainActivity extends AppCompatActivity{
 
 
         binding.fab.setOnClickListener(view -> {
-            if (Objects.requireNonNull(navController.getCurrentDestination()).getId() == R.id.FirstFragment){
-                navController.navigate(R.id.action_FirstFragment_to_SecondFragment);
+            if (Objects.requireNonNull(navController.getCurrentDestination()).getId() == R.id.NotesFragment){
+                navController.navigate(R.id.action_NotesFragment_to_NoteAEFragment);
             }else{
 
-                SecondFragment f = SecondFragment.GetInstance();
+                NoteAEFragment f = NoteAEFragment.GetInstance();
 
                 if (f != null){
                     String title = f.binding.title.getText().toString();

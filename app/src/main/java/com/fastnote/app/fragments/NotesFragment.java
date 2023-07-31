@@ -1,4 +1,4 @@
-package com.fastnote.app;
+package com.fastnote.app.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,21 +8,23 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.fastnote.app.databinding.FragmentFirstBinding;
+import com.fastnote.app.utils.DatabaseHelper;
+import com.fastnote.app.interfaces.EmptyCheck;
+import com.fastnote.app.adapters.NotesAdapter;
+import com.fastnote.app.models.NotesModel;
+import com.fastnote.app.R;
+import com.fastnote.app.databinding.FragmentNotesBinding;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Objects;
 
-public class FirstFragment extends Fragment implements EmptyCheck{
+public class NotesFragment extends Fragment implements EmptyCheck {
 
-    private FragmentFirstBinding binding;
+    private FragmentNotesBinding binding;
 
     @Override
     public View onCreateView(
@@ -30,7 +32,7 @@ public class FirstFragment extends Fragment implements EmptyCheck{
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false);
+        binding = FragmentNotesBinding.inflate(inflater, container, false);
 
         F_GetList();
 

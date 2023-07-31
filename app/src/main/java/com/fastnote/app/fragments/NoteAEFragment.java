@@ -1,4 +1,4 @@
-package com.fastnote.app;
+package com.fastnote.app.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,14 +8,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.fastnote.app.databinding.FragmentSecondBinding;
+import com.fastnote.app.databinding.FragmentNoteaeBinding;
 
 
-public class SecondFragment extends Fragment {
+public class NoteAEFragment extends Fragment {
 
-    public FragmentSecondBinding binding;
+    public FragmentNoteaeBinding binding;
 
-    private static SecondFragment instance;
+    private static NoteAEFragment instance;
 
     @Override
     public View onCreateView(
@@ -23,7 +23,7 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         instance= this;
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentNoteaeBinding.inflate(inflater, container, false);
         if (this.getArguments() != null) {
             String title = this.getArguments().getString("title");
             String note = this.getArguments().getString("note");
@@ -51,7 +51,7 @@ public class SecondFragment extends Fragment {
     }
 
 
-    public static SecondFragment GetInstance()
+    public static NoteAEFragment GetInstance()
     {
         return instance;
     }

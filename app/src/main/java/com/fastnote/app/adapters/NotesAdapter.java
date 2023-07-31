@@ -1,7 +1,6 @@
-package com.fastnote.app;
+package com.fastnote.app.adapters;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -16,6 +15,10 @@ import androidx.navigation.NavController;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.fastnote.app.utils.DatabaseHelper;
+import com.fastnote.app.interfaces.EmptyCheck;
+import com.fastnote.app.models.NotesModel;
+import com.fastnote.app.R;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.List;
@@ -75,7 +78,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
             bundle.putString("note", n.getText());
             bundle.putString("date", n.getDate());
             bundle.putString("id", n.getId());
-            navController.navigate(R.id.action_FirstFragment_to_SecondFragment,bundle);
+            navController.navigate(R.id.action_NotesFragment_to_NoteAEFragment,bundle);
         });
 
 

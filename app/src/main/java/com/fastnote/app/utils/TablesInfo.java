@@ -1,4 +1,4 @@
-package com.fastnote.app;
+package com.fastnote.app.utils;
 
 import android.provider.BaseColumns;
 

@@ -1,4 +1,4 @@
-package com.fastnote.app;
+package com.fastnote.app.models;
 
 public class NotesModel {
     String title,text, id, date;
