@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Fast Note</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Notes</string>
+    <string name="second_fragment_label">Add note</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title">Title</string>
+    <string name="note">start typing</string>
+    <string name="saved">Note updated</string>
+    <string name="added">Note added successfully</string>
+    <string name="too_short">Note must not be empty</string>
+    <string name="sure_delete">Are you sure you want to delete?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty">This place is empty</string>
+    <string name="empty_alt">When a new note is added you can see it here</string>
+</resources>

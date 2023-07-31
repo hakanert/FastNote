@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="5dp"
+    android:id="@+id/card"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:id="@+id/title"
+            android:singleLine="true"
+            android:maxLines="1"
+            tools:text="dasdasdas"
+            android:fontFamily="@font/poppins"
+            android:includeFontPadding="false"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="8"
+            android:id="@+id/note"
+            tools:text="dasdasdas"
+            android:textColor="#6E5575"
+            android:fontFamily="@font/poppins"
+            android:includeFontPadding="false"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#BFA9C5"
+            android:id="@+id/date"
+            tools:text="dasdasdas"
+            android:fontFamily="@font/poppins"
+            android:includeFontPadding="false"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
